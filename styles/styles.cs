@@ -1,0 +1,45 @@
+
+ html{
+  background-image: url(../resources/Beautiful-Sunset-Horizon-picspaper-com.jpg);
+  background-origin: center inline-block;
+  background-position: center fixed;
+  //background-repeat: streatch;
+  padding:10% 50% 0% 10%;
+  //display: inline-block;
+  //height: 800px;
+  color: white;
+ }
+
+body{
+  //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  //margin-right: 20px;
+  display: inline;//inline-block;
+  //margin-left: -50px;
+}
+  #viewdiv{
+  //color: white;
+  font-size:15pt;
+  font-family: Monaco;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  width: 800px;
+  padding: 20px;
+  margin: 0 auto; 
+  }
+
+#mainpage1{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color:red;
+  width:auto;
+  min-width: 500px;
+  min-height: 400px;
+}
+
+#mainStartContriDiv, #DisplayNameContriDiv {
+//box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
+width: 50%;
+}
+
+#totalExp{
+  text-color: white;
+}

@@ -1,0 +1,86 @@
+<div class= "container" id="mainContriViewpdiv">
+<form ><!-- name="myForm"> -->
+	<table class="table" id="mainContriTable" style="color: white;"><!--  table-bordered"> -->
+			<thead>
+				<tr>
+					<td><h3>Member name</h3></td>
+					<td><h3>Contri</h3></td>
+					<!-- <td></td> -->
+					<td><h3>Manage Expense</h3></td>
+					<td><h3>Total to Pay</h3></td>
+					<td><h3>Paid</h3></td>
+				</tr></thead>
+			<tbody>
+				<tr ng-repeat="name in newContriMembers track by $index" id="divaddCotriMem">
+					<td>
+						<img id="img-circleAddMem" class="img-circle" name="avatar{{$index}}" src="{{name.avatar}}" ng-model="MemNameTab"/>
+						<md-input-container>
+							<input  name="name{{$index}}" value="{{name.name}}" ng-readonly="true" aria-label="Readonly field"/>
+						</md-input-container>
+						<!-- 	<input ng-model="name.name" name="name{{$index}}"> -->
+					</td>
+
+
+
+					<td><md-input-container>
+							<input  id="mainContriinputs" name="contriDiv{{$index}}" value="{{sumExpense / (newContriMembers.length) | number:2}}" ng-readonly="true" aria-label="Readonly field"/>
+						</md-input-container>
+					</td>
+					<td>
+						<md-button class="btn btn-success md-fab md-mini" style="float:left" ng-click="manageContri=!manageContri" aria-label="Readonly field"><img src="resources\icon\human-greeting.svg"/>
+						</md-button>
+						<div ng-show="manageContri">
+							<md-input-container class="md-block" flex-gt-sm>
+							
+							<!-- <label>Enter amt</label> -->
+							<input  id="mainContriinputs" name="amount{{$index}}" required  ng-model="amount" aria-label="It asked to writesomething!!!">  
+							<!-- ng-pattern="/^[0-9]{5}$/" type="number"placeholder="0.00"-->
+							<div ng-messages="amount.$error" role="alert" multiple>
+								<!-- <div ng-messages="pattern">That dosen't look like an amount format</div>
+								<div ng-messages="md-maxlength" class="my-message">
+                				Don't be silly...we don't have that much...</div> -->
+                				<div ng-message="required">Required field.</div>
+							</div>								
+							</input>
+						</md-input-container>
+						</div>
+					</td>
+					<td>
+						<md-input-container>
+							<input   id="mainContriinputs" name="totToPay{{$index}}" value="{{sumExpense / (newContriMembers.length)-amount | number:2}}" ng-readonly="true" aria-label="Readonly field"/>
+						</md-input-container>
+					
+					</td>
+					<td>
+						<section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+							<md-switch ng-model="PaidorNot" class="md-primary" aria-label="Paid" >
+							</md-switch>
+        					<md-button class="md-fab md-mini" aria-label="Eat cake">
+            					<md-icon ng-show="PaidorNot" ng-model="PaidYes" md-svg-src="resources/icon/ic_sentiment_very_satisfied_white_48px.svg"></md-icon>
+							<md-icon ng-show="!PaidorNot" md-svg-src="resources/icon/ic_sentiment_neutral_white_48px.svg"></md-icon>
+        					</md-button>
+        				</section>
+						
+					</td>
+				</tr>
+				
+			</tbody>
+		</table>
+		
+		<section layout="row" layout-sm="column" layout-align="center left" layout-wrap>
+			<h4><md-button class="md-raised md-primary md-hue-5 md-accent" ng-click="exportContriEntryExcel()">
+			<img src="resources/icon/file-excel.png"></img>Export to Excel</md-button></h4>
+        	<h4><md-button class="md-raised md-primary md-hue-5 " ng-click="exportContriEntryPDF()">
+        	<img src="resources/icon/pdf_black_48px.svg"></img>Export to PDF</md-button></h4>
+		</section>
+
+		
+		<label><h3>{{totalExpense()}}</h3></label>		
+	</div>
+</form>
+</div>
+
+<ul class="pager">
+		<li><a href="#/addContriMembers" class="Previous">Back</a></li>
+		<li><a href="#/" class="Next">Add members to Contri</a></li>
+</ul>

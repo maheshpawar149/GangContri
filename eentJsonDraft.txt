@@ -1,0 +1,273 @@
+[{
+		"eventName": "asdas"
+	}, {
+		"eventDate": "23/23/2323"
+	}, {
+		"eventPatriExpe": [{
+			"Desc": "Cake",
+			"Amt": 5864
+		}, {
+			"Desc": "Deco",
+			"Amt": 564
+		}]
+	},
+
+	{
+		"MainContriPage": [{
+			"memberName": "mahesh",
+			"Contri": 564,
+			"manage_Expense": 0,
+			"totToPay": 564
+		}, {
+			"memberName": "mahesh",
+			"Contri": 564,
+			"manage_Expense": 0,
+			"totToPay": 564
+		}, {
+			"memberName": "mahesh",
+			"Contri": 564,
+			"manage_Expense": 0,
+			"totToPay": 564
+		}, {
+			"memberName": "mahesh",
+			"Contri": 564,
+			"manage_Expense": 0,
+			"totToPay": 564
+		}, {
+			"memberName": "mahesh",
+			"Contri": 564,
+			"manage_Expense": 0,
+			"totToPay": 564
+		}]
+
+	}
+]
+
+
+///////////////////////////////////////
+
+
+        {value:"Paid"},
+        {value:"Comments(Any)"}
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/// <reference path="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"/>
+var myApp=angular.module('myModule',['ngRoute','ngMaterial','ngMessages'])
+//MAIN Service
+.service('mainService', function($http){
+	this.expenseCount=[{id: 'exp1'},{id: 'exp2'}];
+	this.newContriMembers=[];
+	this.testmsg="hello";
+	// var allNames;
+	// $http.get('resources/gangMembers.json')
+	//  	.then(function(res){
+	//  	allNames = res.data;
+	// });
+})
+
+.factory('mainFactory', function($http){
+	return {
+	 allmNames : function(callback){
+	 			$http.get('resources/gangMembers.json').success(callback);
+	 		}  
+	};
+})
+
+//Main Directive Config
+.config(function($routeProvider){
+	$routeProvider
+	 .when("/",{
+	 	templateUrl: "frontPage.html"
+	 	//controller: "myController"
+	 })
+	.when("/viewnames",{
+		templateUrl: "viewNames.html",
+		controller: "myController"
+	})
+	.when ("/makeContri",{
+		templateUrl: "makeContri.html",
+		controller: "makeContriCtrl"
+	})
+	.when("/addContriMembers",{
+		templateUrl:'addmembersContri.html',
+		controller:'makeContriCtrl'//myController
+	})
+	.when('/MainContriPage',{
+		templateUrl:'showGangContri.html',
+		controller: 'makeContriCtrl'
+	})
+	.when ("/exitPage",{
+		templateUrl: "frontPage.html"
+	})
+	.otherwise({redirectTo: '/'});
+})
+
+
+.controller("myController", function($scope,$http, mainService, mainFactory){
+	$scope.allNames={};
+	mainFactory.allmNames(function(mainFactory){
+		$scope.allNames=mainFactory;
+	})	
+
+	// $scope.exportMembers=function(){
+	// 	alert("Exporting Members in Excel");
+
+	// 	var rows=[{
+	// 		cells:[{value:"Member name"}]
+	// 	}];
+
+	// 	for(var i=0;i<$scope.allNames.length;i++){
+ //    		rows.push({
+ //    			cells:[{value: $scope.allNames[i].name}]
+ //    			})
+ //    	}	
+
+
+	// 	var workbook = new kendo.ooxml.Workbook({
+ //  			sheets:[
+ //    		{
+ //         		columns:[{autoWidth:true}],
+ //    			title: "Members",
+ //      		    rows:rows,
+ //        	}
+ //  		]
+	// });
+
+	// 	kendo.saveAs({
+ //    		dataURI: workbook.toDataURL(),
+ //    		fileName: "Members.xlsx"
+	// 	});
+	// };
+})
+
+//makeContriCtrl Controller----*
+.controller('makeContriCtrl',function($scope,mainService,mainFactory){
+	
+	$scope.eventJson=[];
+	$scope.manageContri=false;
+	//$scope.PaidorNot=true;
+	mainFactory.allmNames(function(mainFactory){
+		$scope.addMemnamesContri=mainFactory;
+	})
+	
+	$scope.expenseCount=mainService.expenseCount;
+	$scope.newContriMembers=mainService.newContriMembers;
+
+	var sumExpense=0;
+	$scope.addNewChoice=function(){
+		$scope.newItemNo=$scope.expenseCount.length+1;
+		$scope.expenseCount.push({'id': 'exp'+$scope.newItemNo});
+	};
+
+	$scope.remChoice=function(index){
+		$scope.expenseCount.splice(index,1);
+	};
+	// console.log(ngModelCtrl);
+
+//calculating Total Contri
+	$scope.totalExpense=function(){
+		 $scope.sumExpense=0;
+		 if ($scope.sumExpense==NaN) {
+		 	$scope.sumExpense=0;
+		 }
+
+		for (var i=0; i<($scope.expenseCount.length);i++){
+			var item=$scope.expenseCount[i].name;
+			$scope.sumExpense=($scope.sumExpense) + (item);
+			//$scope.sumExpense=sumExpense;
+		} //return sumExpense;
+
+	};
+//member Selection
+	$scope.addToContri=function(item,index){
+		$scope.newContriMembers.push({'name':item.name,'avatar':item.avatar});
+		$scope.addMemnamesContri.splice(index,1);
+	};
+	$scope.remToContri=function(item,index){
+		$scope.addMemnamesContri.push({'name':item.name,'avatar':item.avatar});
+		$scope.newContriMembers.splice(index,1);
+	};
+
+//change paid Image
+$scope.exportContriEntry=function(){
+		alert("Exporting Members in Excel");
+
+		var rows=[{
+			cells:[
+				{value:"Member name"},
+				{value:"Contri"},
+				{value:"Manage Expense"},
+				{value:"Total to Pay"},
+				{value:"Paid"},
+				{value:"Comments(Any)"}
+			]
+		}];
+
+		for(var i=0;i<$scope.newContriMembers.length;i++){
+    		rows.push({
+    				cells: //$scope.eventJson
+    			})
+    	}	
+
+
+		var workbook = new kendo.ooxml.Workbook({
+  			sheets:[
+    		{
+         		columns:[{autoWidth:true}],
+    			title: "Members",
+      		    rows:rows,
+        	}
+  		]
+	});
+
+		kendo.saveAs({
+    		dataURI: workbook.toDataURL(),
+    		fileName: "Members.xlsx"
+		});
+	};
+/////////////////////////
+$scope.getmakeContridetails=function(){
+	var getparti=$("[name='parti4']").val();
+	var getamt=$("[name='contriAmt4']").val();
+	alert("Parti:",$scope.getparti);
+	alert("Amt: ",$scope.getamt);
+};
+
+$scope.printpageExpense=function(){
+	$scope.eventJson.push({'eventName': $("[name='Desc']").val()});
+	for(var i=0; i<=$scope.expenseCount.length-1;i++)
+	{		
+		$scope.eventJson.push({'eventPatriExpe':[{'Desc': $('input[name=parti'+i+']').val()},{'Amt':$('input[name=contriAmt'+i+']').val()}]});		
+	}
+	console.log($scope.eventJson);
+	alert(JSON.stringify($scope.eventJson));
+};
+
+$scope.printpageMain=function(){
+	for(var i=0; i<=$scope.expenseCount.length-1;i++)
+	{		
+		$scope.eventJson.push({'MainContriPage': [{'memberName': $('input[name=name'+i+']').val(),'Contri': $('input[name=contriDiv'+i+']').val(),'manage_Expense': $('input[name=amount'+i+']').val(),'totToPay': $('input[name=totToPay'+i+']').val()}] });
+
+	}
+	console.log($scope.eventJson);
+	alert(JSON.stringify($scope.eventJson));
+	$scope.exportContriEntry();
+};
+
+
+
+
+});

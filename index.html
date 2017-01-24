@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+    <head>
+        <title> Gang Contri</title>
+            <meta charset="utf-8">
+
+            <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"> 
+            <script src = "Scripts/angular.min.js"></script>
+            <script src = "Scripts/angular-route.min.js"></script>
+		
+<!-- Angular Styles -->
+      <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+      <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500,400italic,700,700italic' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="//storage.googleapis.com/code.getmdl.io/1.0.1/material.teal-red.min.css" />
+      <script src="//storage.googleapis.com/code.getmdl.io/1.0.1/material.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="styles/styles.css">
+        <script src="Scripts/testjs.js"></script>
+
+<!--Kendo Links -->
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.2.714/styles/kendo.common.min.css"/>
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.2.714/styles/kendo.rtl.min.css"/>
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.2.714/styles/kendo.silver.min.css"/>
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.2.714/styles/kendo.mobile.all.min.css"/>
+
+<!-- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script> -->
+    <script src="http://kendo.cdn.telerik.com/2016.2.714/js/jszip.min.js"></script>
+    <script src="http://kendo.cdn.telerik.com/2016.2.714/js/kendo.all.min.js"> </script>
+
+
+<style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      position: fixed;
+    }
+    </style>
+
+</head>
+
+<body>
+  <nav class="magenta">
+    <div>
+      
+    </div>
+  </nav>
+
+
+
+
+
+
+<!-- ???????????????????????????????????????????????????? -->
+    <!-- <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Portfolio</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+<!-- 
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>My Portfolio</h1>      
+    <p>Some text that represents "Me"...</p>
+  </div>
+</div> -->
+
+  <md-toolbar class="md-success">
+  <div class="md-toolbar-tools"> <h1 class="md-flex">My Gang Contri</h1></div>
+<!--   <nav>
+    <div class="nav-wrapper">
+        <md-button class="waves-effect waves-light btn">A button</md-button>
+    </div>
+  </nav>
+ -->  </md-toolbar> 
+
+    <div class="container" id="mainpage">
+    <form name="myForm">
+        <div ng-view="" id="viewdiv"></div>
+    </form>
+    </div>
+    
+  <!--  <footer class="mdl-mini-footer">
+      <div class="mdl-mini-footer__left-section">
+        <div class="mdl-logo">Title</div>
+        <ul class="mdl-mini-footer__link-list">
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Privacy & Terms</a></li>
+        </ul>
+      </div>
+    </footer> -->
+
+</body>
+</html>
+

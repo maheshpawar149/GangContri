@@ -1,0 +1,87 @@
+[{
+		"eventName": "asdas",
+		"eventDate": "23/23/2323",
+		"eventPatriExpe": [{
+			"Desc": "Cake",
+			"Amt": 5864
+		}, {
+			"Desc": "Deco",
+			"Amt": 564
+		}],
+		"MainContriPage": [{
+			"memberName": "mahesh",
+			"Contri": 564,
+			"manage_Expense": 0,
+			"totToPay": 564
+		}, {
+			"memberName": "mahesh",
+			"Contri": 564,
+			"manage_Expense": 0,
+			"totToPay": 564
+		}, {
+			"memberName": "mahesh",
+			"Contri": 564,
+			"manage_Expense": 0,
+			"totToPay": 564
+		}, {
+			"memberName": "mahesh",
+			"Contri": 564,
+			"manage_Expense": 0,
+			"totToPay": 564
+		}, {
+			"memberName": "mahesh",
+			"Contri": 564,
+			"manage_Expense": 0,
+			"totToPay": 564
+		}]
+	}
+
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////
+[{
+  "MainContriPage": [{
+    "memberName": "mahesh",
+    "Contri": 564,
+    "manage_Expense": 0,
+    "totToPay": 564
+  }, {
+    "memberName": "mahesh",
+    "Contri": 564,
+    "manage_Expense": 0,
+    "totToPay": 564
+  }, {
+    "memberName": "mahesh",
+    "Contri": 564,
+    "manage_Expense": 0,
+    "totToPay": 564
+  }, {
+    "memberName": "mahesh",
+    "Contri": 564,
+    "manage_Expense": 0,
+    "totToPay": 564
+  }, {
+    "memberName": "mahesh",
+    "Contri": 564,
+    "manage_Expense": 0,
+    "totToPay": 564
+  }]
+}]

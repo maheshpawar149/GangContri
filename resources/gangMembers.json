@@ -1,24 +1,93 @@
 [
-	{"name" : "Mahesh Pawar","avatar": "resources/icons/xwRkT.jpg","Description": "mahesh Description"},
-	{"name" : "Pushkar Padmanabhuni","avatar": "resources/icons/pp (8).jpg","Description": "Description"},
-	{"name" : "Simmin Shaikh","avatar": "resources/icons/Simmin 20150915_000208.jpg","Description": "Simmin Description"},
-	{"name" : "Nikhil Chindatkar","avatar": "resources/icons/Soft-Kitty-the-big-bang-theory-32838872-458-384.gif","Description": "Chuddy Buddy"},
-	{"name" : "Tejal Bhujbal","avatar": "resources/icons/WP_20150823_210.jpg","Description": "Description"},
-	{"name" : "Yoginee Balkawde","avatar": "resources/icons/vlcsnap-2015-12-12-05h48m08s22.png","Description": "Description"},
-	{"name" : "Abhishek","avatar": "resources/icons/Anjaan-surya-1.jpg","Description": "Description"},
-	{"name" : "Venky Ravindran", "avatar": "resources/icons/giphy.gif"},
-	{"name" : "Sameer Khurd", "avatar": "resources/icons/pp (1).jpg"},
-	{"name" : "Rohit Sain", "avatar": "resources/icons/pp (2).jpg"},
-	{"name" : "Samayak  Bhalerao", "avatar": "resources/icons/pp (3).jpg"},
-	{"name" : "Surbhi Gupta", "avatar": "resources/icons/pp (4).jpg"},
-	{"name" : "Surabhi Borgikar", "avatar": "resources/icons/pp (5).jpg"},
-	{"name" : "Pranshu Madhukar", "avatar": "resources/icons/pp (6).jpg"},
-	{"name" : "Aniruddha Kalburgi", "avatar": "resources/icons/pp (7).jpg"},
-	{"name" : "Rajesh Kolhapure", "avatar": "resources/icons/pp.jpg"},
-	{"name" : "Bhakti Waghmare", "avatar": "resources/icons/don.png"},
-	{"name" : "Karan Sapte", "avatar": "resources/icons/aplus_thumb.jpg"},
-	{"name" : "Mahesh Mahajan", "avatar": "resources/icons/chumbak-facebook-stickers.jpg"},
-	{"name" : "Sandesh Bhaiswar", "avatar": "resources/icons/Anjaan-surya-1.jpg"},
-	{"name" : "Parshu", "avatar": "resources/icons/vlcsnap-2016-02-27-14h33m55s47.png"}
-
+	{
+		"name": "Mahesh Pawar",
+		"avatar": "resources/icons/xwRkT.jpg",
+		"Description": "mahesh Description"
+	},
+	{
+		"name": "Pushkar Padmanabhuni",
+		"avatar": "resources/icons/pp (8).jpg",
+		"Description": "Description"
+	},
+	{
+		"name": "Simmin Shaikh",
+		"avatar": "resources/icons/Simmin 20150915_000208.jpg",
+		"Description": "Simmin Description"
+	},
+	{
+		"name": "Nikhil Chindatkar",
+		"avatar": "resources/icons/Soft-Kitty-the-big-bang-theory-32838872-458-384.gif",
+		"Description": "Chuddy Buddy"
+	},
+	{
+		"name": "Tejal Bhujbal",
+		"avatar": "resources/icons/WP_20150823_210.jpg",
+		"Description": "Description"
+	},
+	{
+		"name": "Yoginee Balkawde",
+		"avatar": "resources/icons/vlcsnap-2015-12-12-05h48m08s22.png",
+		"Description": "Description"
+	},
+	{
+		"name": "Abhishek",
+		"avatar": "resources/icons/Anjaan-surya-1.jpg",
+		"Description": "Description"
+	},
+	{
+		"name": "Venky Ravindran",
+		"avatar": "resources/icons/giphy.gif"
+	},
+	{
+		"name": "Sameer Khurd",
+		"avatar": "resources/icons/pp (1).jpg"
+	},
+	{
+		"name": "Rohit Sain",
+		"avatar": "resources/icons/pp (2).jpg"
+	},
+	{
+		"name": "Samayak  Bhalerao",
+		"avatar": "resources/icons/pp (3).jpg"
+	},
+	{
+		"name": "Surbhi Gupta",
+		"avatar": "resources/icons/pp (4).jpg"
+	},
+	{
+		"name": "Surabhi Borgikar",
+		"avatar": "resources/icons/pp (5).jpg"
+	},
+	{
+		"name": "Pranshu Madhukar",
+		"avatar": "resources/icons/pp (6).jpg"
+	},
+	{
+		"name": "Aniruddha Kalburgi",
+		"avatar": "resources/icons/pp (7).jpg"
+	},
+	{
+		"name": "Rajesh Kolhapure",
+		"avatar": "resources/icons/pp.jpg"
+	},
+	{
+		"name": "Bhakti Waghmare",
+		"avatar": "resources/icons/don.png"
+	},
+	{
+		"name": "Karan Sapte",
+		"avatar": "resources/icons/aplus_thumb.jpg"
+	},
+	{
+		"name": "Mahesh Mahajan",
+		"avatar": "resources/icons/chumbak-facebook-stickers.jpg"
+	},
+	{
+		"name": "Sandesh Bhaiswar",
+		"avatar": "resources/icons/Anjaan-surya-1.jpg"
+	},
+	{
+		"name": "Parshu",
+		"avatar": "resources/icons/vlcsnap-2016-02-27-14h33m55s47.png"
+	}
 ]

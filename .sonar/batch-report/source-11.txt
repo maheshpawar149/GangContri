@@ -1,0 +1,28 @@
+<div class="container" id="divaddCotriMem">
+
+	<div id="divaddCotriMem1"><label><h3>Select Members</h3></label>
+		<div class="pull-xs-left" ng-repeat="name in addMemnamesContri track by $index">
+			<button id="memberbtn" type="button" name="" value='{{name.name}}' class="btn btn-success" ng-click="addToContri(this.name,$index)">
+			<img id="img-circleAddMem" src="{{name.avatar}}"/>
+			<h4>{{name.name}}</h4>
+    	</button>
+		</div>
+	</div>
+
+	<div id="divaddCotriMem2"><label><b><h3>Remove Members</h3></b></label>
+		<div class="pull-xs-right" ng-repeat="name in newContriMembers track by $index">
+			<button id="memberbtn" type="button" name="" value='{{name.name}}' class="btn btn-warning" ng-click="remToContri(this.name,$index)">
+			<img id="img-circleAddMem" src="{{name.avatar}}"/>
+			<h4>{{name.name}}</h4>
+    		</button>
+		</div>
+	</div>
+</div>
+
+<ul class="pager">
+		<li><a href="#/makeContri" class="Previous">Back</a></li>
+		<li><a href="#/MainContriPage" class="Next">Show Gang Contri</a></li>
+		
+	</ul>
+</ul>
+

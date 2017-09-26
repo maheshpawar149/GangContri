@@ -2,19 +2,21 @@
 
 <div id="mainStartContriDiv" class="container">
 	<md-toolbar>
-      <div class="md-toolbar-tools" layout-align="space-between">
-        <div class="md-title">Manage Total Expenses</div>
-      </div>
-    </md-toolbar> 
-<md-content layout-padding >
-<form name="makeContriExpform" ng-init="$scope.eventJson=[]">
-	<md-input-container class="md-block">
-		<label>Event Description</label>
-		<input type="text" name="Desc" required ng-model="makeContriDescText">
-		<div ng-messages="makeContriExpform.makeContriDescText.$error"><div ng-messages="required"> </div></div>
-	</md-input-container>
+	<div class="md-toolbar-tools" layout-align="space-between">
+		<div class="md-title">Manage Total Expenses</div>
+	</div>
+	</md-toolbar>
+	<md-content layout-padding>
+	<form name="makeContriExpform" ng-init="$scope.eventJson=[]">
+		<md-input-container class="md-block"> <label>Event
+			Description</label> <input type="text" name="Desc" required
+			ng-model="makeContriDescText">
+		<div ng-messages="makeContriExpform.makeContriDescText.$error">
+			<div ng-messages="required"></div>
+		</div>
+		</md-input-container>
 
-<!-- 	<md-input-container class="md-block" flex-gt-sm>
+		<!-- 	<md-input-container class="md-block" flex-gt-sm>
             <label>Postal Code</label>
             <input name="postalCode" ng-model="postalCode" placeholder="12345"
                    required ng-pattern="/^[0-9]$/">
@@ -28,49 +30,46 @@
               </div>
             </div>
           </md-input-container> -->
-	
-	<table class="table table-bordered">
-		<tr data-ng-repeat="expense in expenseCount">
-			<td>
-				<section layout="row" layout-sm="coloumn" layout-align="center center" layout-wrap>
-					<h3>{{$index+1}}.</h3><br><br>
-					<md-input-container>
-						<label>Gift, Cake, Decoration i.e.</label>	
-						<input type="text" name="parti{{$index}}">	
-					</md-input-container>
-					<md-input-container>
-						<label>Amount</label>	
-						<input name="contriAmt{{$index}}" type="number" required  value=0 name="" data-ng-model="expense.name"/>
-							<!-- <div ng-messages="makeContriExpform.contriAmt.$error" role="alert" multiple>
+
+		<table class="table table-bordered">
+			<tr data-ng-repeat="expense in expenseCount">
+				<td>
+					<section layout="row" layout-sm="coloumn"
+						layout-align="center center" layout-wrap>
+						<h3>{{$index+1}}.</h3>
+						<br>
+						<br>
+						<md-input-container> <label>Gift,
+							Cake, Decoration i.e.</label> <input type="text" name="parti{{$index}}">
+						</md-input-container>
+						<md-input-container> <label>Amount</label> <input
+							name="contriAmt{{$index}}" type="number" required value=0 name=""
+							data-ng-model="expense.name" /> <!-- <div ng-messages="makeContriExpform.contriAmt.$error" role="alert" multiple>
 								<div ng-message="required" class="my-message">Don't Trick me..enter an amount</div>
 								<div ng-message="pattern" class="my-message">What make you thing it is a number. Go back to LKG</div>
-							</div> -->
-
-						<!-- <input type="number"  ng-pattern="/^[0-9]$/" value=0 name="" data-ng-model="expense.name">-->
-					</md-input-container>
-					<md-button class="md-fab md-mini" aria-label="remove" name="addExp"  ng-click="remChoice($index)" style="float:right">
-            				<md-icon md-svg-src="resources/icon/minus.svg"></md-icon>
-        			</md-button>
-				</section>
-			</td>
-		</tr>
-		<tr>
-			<td> 
-				<md-button style="float:left" class="md-fab md-mini" aria-label="Add Expense" name="addExp"  ng-click="addNewChoice()">
-            		<md-icon md-svg-src="resources/icon/plus.svg"></md-icon>
-        		</md-button>
-					
-			<label  ng-init="sumExpense = 0" id="totalExp" style="float:right"><h3>Total: {{sumExpense}}{{totalExpense()}} -/ Rs</h3></label>
-			</td>
-		</tr>		
-	</table>
+							</div> --> <!-- <input type="number"  ng-pattern="/^[0-9]$/" value=0 name="" data-ng-model="expense.name">-->
+						</md-input-container>
+						<md-button class="md-fab md-mini" aria-label="remove"
+							name="addExp" ng-click="remChoice($index)" style="float:right">
+						<md-icon md-svg-src="resources/icon/minus.svg"></md-icon> </md-button>
+					</section>
+				</td>
+			</tr>
+			<tr>
+				<td><md-button style="float:left" class="md-fab md-mini"
+						aria-label="Add Expense" name="addExp" ng-click="addNewChoice()">
+					<md-icon md-svg-src="resources/icon/plus.svg"></md-icon> </md-button> <label
+					ng-init="sumExpense = 0" id="totalExp" style="float: right"><h3>Total:
+							{{sumExpense}}{{totalExpense()}} -/ Rs</h3></label></td>
+			</tr>
+		</table>
 	</md-content>
-</form>
+	</form>
 
 	<ul class="pager">
 		<li><a href="#/exitPage" class="Previous">Exit</a></li>
-		<li><a href="#/addContriMembers" class="Next" ng-click="printpageExpense()">Add members to Contri</a></li>		
+		<li><a href="#/addContriMembers" class="Next"
+			ng-click="printpageExpense()">Add members to Contri</a></li>
 	</ul>
 
 </div>
-	

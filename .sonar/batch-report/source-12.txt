@@ -1,0 +1,21 @@
+<div id="mainPageOptions">
+ <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+      <section layout="column" layout-sm="row" layout-align="center right">
+      	<a href="#/viewnames" class="btn btn-info" id="frontBtn">
+  	      	<img src="resources/tumblr_n4j68df8W81s2wio8o1_500.gif" width="180" height="170" border="0"></img>
+  	    </a>
+      <h3 style="color: #f39c12 ">View Gang Members</h3>  	
+      </section>	
+      <br/><br/>
+      <section layout="column" layout-sm="row" layout-align="center right">
+      	<a href="#/makeContri" class="btn btn-success" id="frontBtn">
+	      	<img src="resources/9d99_1.gif" width="180" height="170" border="0"></img>
+    	</a>
+      <h3 style="color: #229954 ">Start a New Contri</h3>
+      </section>
+</section>
+
+    
+    
+    
+</div>

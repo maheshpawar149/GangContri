@@ -1,35 +1,40 @@
 <md-toolbar>
-  <div class="md-toolbar-tools">
-    <h1><span>My Gang</span></h1>
-        <span flex></span>
-        <md-button aria-label="Go Back" href="#/exitPage" >
-          Go Back
-        </md-button>        
-  </div>
-</md-toolbar>     
+<div class="md-toolbar-tools">
+	<h1>
+		<span>My Gang</span>
+	</h1>
+	<span flex></span>
+	<md-button aria-label="Go Back" href="#/exitPage"> Go Back
+	</md-button>
+</div>
+</md-toolbar>
 
-<div>                
-  <div class="mdl-grid" >
-        <div class="mdl-cell mdl-cell--1-col graybox" style="background-color:red;">
-          <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp " ng-repeat="name in allNames" id="memberCard1" style="padding:10px; margin:10px;">
-            <figure class="mdl-card__media">
-              <img id="memberCardImg" src="{{name.avatar}}" alt="" />
-            </figure>
-            <div class="mdl-card__title">
-              <h1 class="mdl-card__title-text">{{name.name}}</h1>
-            </div>
-            <div class="mdl-card__supporting-text">
-              <p><h4>{{name.Description}}</h4></p>
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-              <div class="mdl-layout-spacer"></div>
-              <!-- <md-button class="mdl-button mdl-button--icon mdl-button--colored">
+<div>
+	<div class="mdl-grid">
+		<div class="mdl-cell mdl-cell--1-col graybox"
+			style="background-color: red;">
+			<div
+				class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp "
+				ng-repeat="name in allNames" id="memberCard1"
+				style="padding: 10px; margin: 10px;">
+				<figure class="mdl-card__media">
+					<img id="memberCardImg" src="{{name.avatar}}" alt="" />
+				</figure>
+				<div class="mdl-card__title">
+					<h1 class="mdl-card__title-text">{{name.name}}</h1>
+				</div>
+				<div class="mdl-card__supporting-text">
+					<p>
+					<h4>{{name.Description}}</h4>
+					</p>
+				</div>
+				<div class="mdl-card__actions mdl-card--border">
+					<div class="mdl-layout-spacer"></div>
+					<!-- <md-button class="mdl-button mdl-button--icon mdl-button--colored">
                 <i class="material-icons">favorite</i>
               </md-button> -->
-            </div>
-          </div>
-        </di4>
+				</div>
+			</div>
+			</di4>
 
-      </div>
-
-
+		</div>
